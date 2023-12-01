@@ -15,7 +15,7 @@ function Navbar2() {
                         <chakra.a href="/" title="Choc Home Page" display="flex" alignItems="center" style={{padding:'2px'}}>
                             {/* <img src='https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg'
                                 width='200px'  /> */}
-                            <Text fontWeight='bold' fontSize='24px' color='purple'>BUET CSE-20</Text>
+                            <Text fontWeight='bold' fontSize='24px' color='purple'>BUET-CSE-20</Text>
                         </chakra.a>
                     </Flex>
                     <HStack display="flex" alignItems="center" spacing={1}>
@@ -37,22 +37,6 @@ function Navbar2() {
                             <VStack pos="absolute" top={0} left={0} right={0} display={mobileNav.isOpen ? "flex" : "none"}
                                 flexDirection="column" p={2} pb={4} m={2} bg={bg} spacing={3} rounded="sm" shadow="sm">
                                 <CloseButton aria-label="Close menu" onClick={mobileNav.onClose} />
-
-                                <Button w="full" variant="ghost">
-                                    Features
-                                </Button>
-                                <Button w="full" variant="ghost">
-                                    Pricing
-                                </Button>
-                                <Button w="full" variant="ghost">
-                                    Blog
-                                </Button>
-                                <Button w="full" variant="ghost">
-                                    Company
-                                </Button>
-                                <Button w="full" variant="ghost">
-                                    Sign in
-                                </Button>
                             </VStack>
                         </Box>
                     </HStack>
