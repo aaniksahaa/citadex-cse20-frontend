@@ -32,8 +32,7 @@ function SheetShow({ url }) {
         onLoad={handleIframeLoad}
         src={sheet_url}
         width="100%" 
-        height="650" 
-        allowfullscreen="false" 
+        height="650"  
         mozallowfullscreen="false" 
         webkitallowfullscreen="false"
         >
