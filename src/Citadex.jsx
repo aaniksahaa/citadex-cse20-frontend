@@ -5,6 +5,26 @@ import Navbar2 from './components/Navbar2'
 import OptionSelector from './components/OptionSelector'
 import { Center, Tab, TabIndicator, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react'
 import SheetShow from './components/SheetShow'
+import { GiStopwatch } from "react-icons/gi";
+import { ImBooks } from "react-icons/im";
+import { FaLink } from "react-icons/fa6";
+import { SiGoogleclassroom } from "react-icons/si";
+
+const getIconComponent = (iconIndex) => {
+  switch (iconIndex) {
+    case 0:
+      return <FaLink size={24} style={{ marginRight: '8px' }} />;
+    case 1:
+      return <SiGoogleclassroom size={24} style={{ marginRight: '8px' }} />;
+    case 2:
+      return <ImBooks size={24} style={{ marginRight: '8px' }} />;
+    case 3:
+      return <GiStopwatch size={24} style={{ marginRight: '8px' }} />;
+    default:
+      // If the provided iconType is not recognized, you can return a default or null
+      return null;
+  }
+};
 
 export default function Citadex() {
 
@@ -35,7 +55,7 @@ export default function Citadex() {
     <Tabs isLazy={false} p={2} isFitted variant='enclosed' colorScheme='purple' size='lg'>
       <TabList>
         {Object.keys(data).map((key, index) => (
-          <Tab key={index}>{key}</Tab>
+          <Tab key={index}>{getIconComponent(index)} {key}</Tab>
         ))}
       </TabList>
       <TabIndicator
